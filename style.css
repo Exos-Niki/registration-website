@@ -1,122 +1,458 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
-
 .bg-container{
-    background-image: url("https://static.vecteezy.com/system/resources/previews/020/978/578/non_2x/gradient-color-abstract-background-gradient-background-design-for-covers-wallpapers-branding-business-cards-social-media-website-others-you-can-use-the-gradient-texture-for-backgrounds-vector.jpg");
-    height: 100vh;
-    background-size: cover;
+  background-image: linear-gradient(to right, blue, rgb(69, 102, 249));
+  background-size: cover;
+  height: 100vh;
 }
 
 .card{
-    background-color: white;
-    height: 600px;
-    width: 400px;
-    margin: 500px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 20px;
+  background-color: white;
+  height:670px;
+  width: 500px;
+  border-radius: 20px;
 }
 
-.button{
+.google-img{
+  height: 30px;
+  width: 30px;
+}
+
+.login-icon-wrap{
+  background-image: linear-gradient(to right, blue, rgb(69, 102, 249));
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+
+.icon{
+  font-size: 30px;
+  color: white;
+}
+
+.login-title{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: blue;
+  font-size: 30px;
+}
+
+.login-subtitle{
+  font-family:Arial, Helvetica, sans-serif;
+  color: grey;
+  font-size: 12px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 1rem;
+}
+
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="text"] {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #111111;
+    background-color: #f9f9f9;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+
+.field label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #444444;
+}
+
+
+.field input:hover {
+    border-color: #aaaaaa;
+    background-color: #ffffff;
+}
+
+.field input:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.field input::placeholder {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.pwd-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pwd-wrap input {
+    padding-right: 42px;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888888;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    transition: color 0.15s ease;
+}
+
+.toggle-eye:hover {
+    color: #444444;
+}
+
+.forgot-link {
+    text-align: right;
+    font-size: 12px;
+    margin-top: -6px;
+    margin-right: 20px;
+    margin-bottom: 1rem;
+}
+
+.forgot-link a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link a:hover {
+    text-decoration: underline;
+}
+
+/* ── Divider ── */
+.divider {
+    border: none;
+    border-top: 1px solid #eeeeee;
+    margin: 1.25rem 0;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 11px 0;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    letter-spacing: 0.01em;
+    margin-bottom: 1rem;
+}
+
+.login-btn:hover {
+    background-color: #2563eb;
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+    background-color: #1d4ed8;
+}
+
+.or-sep {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0.75rem 0;
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    color: #444444;
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.google-btn:hover {
+    background-color: #f5f5f5;
+    border-color: #aaaaaa;
+}
+
+.register-link {
+    text-align: center;
+    font-size: 13px;
+    color: #666666;
+    margin-top: 1.25rem;
+}
+
+.button {
+    color: blue;
+    border-width: 0px;
+    background-color: transparent;
+}
+
+.card-1{
+    background-color: white;
+  height:670px;
+  width: 530px;
+  border-radius: 20px;
+}
+
+.icon-card{
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
     background-color: blue;
     color: white;
-    border-color: white;
-    width: 200px;
-    border-width: 0px;
-    text-align: center;
 }
 
-.paragraph{
-    font-family: roboto;
-    margin: 20px;
-    font-size: 36px;
-}
-
-.card-detail{
-    background-color: white;
-    height: 660px;
-    width: 500px;
-    text-align: center;
-    border-radius: 20px;
-}
-
-.main-head{
-    font-family: sans-serif;
-    padding: 10px;
-   
-}
-
-.input-group{
-    margin-bottom: 15px;
-}
-
-.input-group input{
-    width: 100%;
-    padding:8px;
-    border: none;
-    border-bottom: 2px solid #00bcd4;
-    outline: none;
-}
-
-.input-group input:focus{
-    border-bottom: 2px solid#0072ff;
-}
-
-.form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-container{
-       padding: 20px;
-       border-radius: 10px;
-}
-
-.btn{
-    border-color: blue;
-    border-width: 5px;
-    border-radius: 20px;
-}
-
-.card-group{
-    background-color: white;
-    height: 350px;
-    width: 400px;
-    margin: 180px;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.images{
-    height: 85px;
-    width: 95px;
-}
-
-.heading-end{
-    font-family: roboto;
-    text-decoration: underline;
-    color: blue;
+.icon{
     font-size: 20px;
 }
 
-.description{
-    color: black;
-}
-
-.custon-button{
-    background-color: transparent;
-    border-radius: 0px;
-    border-width: 0px;
-    text-decoration: underline;
+.cre-head{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: blue;
 }
 
-.acc-para{
-    font-family: Roboto;
-    font-size: 28px;
+
+.field-1 {
+    margin-top: 5px;
+}
+
+.field-1 label {
+    font-size: 13px;
+
+    font-weight: 500;
+    color: #444444;
 }
 
 
-#staticBackdropLabel{
-    text-align:center;
+.field-1 input[type="text"],
+.field-1 input[type="email"],
+.field-1 input[type="tel"],
+.field-1 input[type="password"] {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #111111;
+    background-color: #f9f9f9;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.field-1 input[type="text"]:hover,
+.field-1 input[type="email"]:hover,
+.field-1 input[type="tel"]:hover,
+.field-1 input[type="password"]:hover {
+    border-color: #aaaaaa;
+    background-color: #ffffff;
+}
+
+.field-1 input[type="text"]:focus,
+.field-1 input[type="email"]:focus,
+.field-1 input[type="tel"]:focus,
+.field-1 input[type="password"]:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.field-1 input::placeholder {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+
+.pwd-wrap-1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pwd-wrap-1 input {
+    padding-right: 42px;
+}
+
+.toggle-eye-1 {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888888;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    transition: color 0.15s ease;
+}
+
+.toggle-eye-1:hover {
+    color: #444444;
+}
+
+
+.strength-bar {
+    display: flex;
+    gap: 4px;
+    margin-top: 7px;
+}
+
+.strength-seg {
+    height: 3px;
+    flex: 1;
+    border-radius: 2px;
+    background-color: #e0e0e0;
+    transition: background-color 0.25s ease;
+}
+
+.strength-label {
+    font-size: 11px;
+    color: #888888;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.match-hint {
+    font-size: 11px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+}
+
+.error-message {
+  display: block;
+  margin-top: 0.3rem;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  min-height: 1rem;
+}
+
+.divider-1 {
+    border: none;
+    border-top: 1px solid #eeeeee;
+    margin: 0.5rem 0 1.25rem;
+}
+
+
+.terms-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 1.25rem 0 1.5rem;
+}
+
+.terms-row input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: #3b82f6;
+}
+
+.terms-row label {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.terms-row a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-row a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 11px 0;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    letter-spacing: 0.01em;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+    background-color: #1d4ed8;
+}
+
+.submit-btn:disabled {
+    background-color: #c7d8fd;
+    color: #ffffff;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.model-img{
+    height: 250px;
+    width: 300px;
 }
